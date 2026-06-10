@@ -13,10 +13,13 @@
     width: 100%;
     height: 100vh; 
     background-color: black;
+        position: relative;
 }
 #nav{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 2vh;
 }
 #nav a{
     color: white;
@@ -35,11 +38,11 @@
     font-size: 9vw;
     font-family: "General Sans Medium", sans-serif;
     opacity: .6;
-    margin-left: 3rem;
+    margin-left: 5rem;
     
 }
 #heading #sech1{
-    margin-left: 11rem;
+    margin-left: 14rem;
     margin-top: -20px;
 }
 #heading h5{
@@ -170,4 +173,7 @@
     text-decoration: none;
     color: white;
     opacity: .8;
+}
+#main{
+    background-color: black;
 }
