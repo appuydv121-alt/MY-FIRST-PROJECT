@@ -100,3 +100,33 @@
     z-index: 999;
     display: none;
 }
+#about{
+    background-color: black;
+    width: 100%;
+   
+    display: flex;
+    gap: 35px;
+    justify-content: space-between;
+    padding: 10vw 5vw;
+      padding-left: 38vw;
+}
+#about img{
+    width: 200px;
+    height: 200px;
+}
+#textAbout{
+    width: 29rem;
+    opacity: .9;
+}
+#textAbout p{
+    margin-bottom: 28px;
+}
+#about h5{
+    font-size: 18px;
+}
+#about a{
+    border: 1px solid white;
+    padding: 8px 16px;
+    border-radius: 1rem;
+    text-decoration: none;
+}
