@@ -2,4 +2,52 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: aliceblue;
+    
+}
+
+#main{
+    width: 100%;
+    
+}
+#hero{
+    width: 100%;
+    height: 100vh; 
+    background-color: black;
+}
+#nav{
+    display: flex;
+    justify-content: space-between;
+}
+#nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+#nav h4{
+    color: white;
+}
+#heading{
+    margin-top: 90px;
+}
+#heading h1{
+    font-size: 8vw;
+    font-family: "General Sans Medium", sans-serif;
+    opacity: .6;
+    margin-left: 3rem;
+    
+}
+#heading #sech1{
+    margin-left: 9rem;
+}
+#heading h5{
+    opacity: .8;
+
+}
+.blockText{
+    width: fit-content;
+
+}
+.blockText h5{
+    text-align: right;
 }
