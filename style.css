@@ -8,7 +8,6 @@
 
 #main{
     width: 100%;
-    
 }
 #hero{
     width: 100%;
@@ -21,28 +20,31 @@
 }
 #nav a{
     color: white;
+    opacity: .8;
     text-decoration: none;
     font-size: 18px;
 }
 #nav h4{
     color: white;
+    opacity: .8;
 }
 #heading{
-    margin-top: 90px;
+    margin-top: 80px;
 }
 #heading h1{
-    font-size: 8vw;
+    font-size: 9vw;
     font-family: "General Sans Medium", sans-serif;
     opacity: .6;
     margin-left: 3rem;
     
 }
 #heading #sech1{
-    margin-left: 9rem;
+    margin-left: 11rem;
+    margin-top: -20px;
 }
 #heading h5{
     opacity: .8;
-
+    position: relative;
 }
 .blockText{
     width: fit-content;
@@ -50,4 +52,22 @@
 }
 .blockText h5{
     text-align: right;
+     margin-top: -10px;
+
+}
+#chotiheading{
+    width: 100%;
+    text-align: right;
+    margin-top: 90px;
+    padding: 30px;
+    font-size: 18px;
+}
+#herofooter{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2vw;
+    position: absolute;
+    align-items: center;
+    bottom: 3%;
+    width: 100%;
 }
