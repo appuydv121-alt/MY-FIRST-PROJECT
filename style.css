@@ -177,3 +177,13 @@
 #main{
     background-color: black;
 }
+#minicircle{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    opacity: .8;
+    z-index: 1000;
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+}
