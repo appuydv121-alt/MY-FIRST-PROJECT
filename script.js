@@ -2,14 +2,6 @@ const scroll = new LocomotiveScroll({
     el: document.querySelector('[data-scroll-container]'),
     smooth: true
 });
-
-function circleMouseFollower(){
-    window.addEventListener('mousemove', function(dets){
-        // console.log(dets.clientX, dets.clientY);
-        document.querySelector('#minicircle').style.transform = `translate(${dets.clientX}px, ${dets.clientY}px)`;
-    })
-}
-
 function pageTransition(){
     var tl = gsap.timeline();
     tl.from('#nav' , {
@@ -25,7 +17,7 @@ function pageTransition(){
         stagger:0.2,
         delay: -1
     })
-        .from('#herofooter' , {
+    .from('#herofooter' , {
             y: "-10",
             opacity: 0,
             duration: 1.5,
@@ -33,5 +25,32 @@ function pageTransition(){
             delay: -1
         });
 }
-circleMouseFollower();
+//when mouse moves the circle should skew by some amount and when mouse stops it should come back to normal
+var timeoutId;
+function skewMouseFollower(){
+
+        var xscale=1;
+        var yscale=1;
+        var xprev=0;
+        var yprev=0;
+    window.addEventListener('mousemove', function(dets){
+        clearTimeout(timeoutId);
+        var xdiff=dets.clientX-xprev;
+        var ydiff=dets.clientY-yprev;
+       xscale=gsap.utils.clamp(.7,1.3,xdiff);
+       yscale=gsap.utils.clamp(.7,1.3,ydiff);
+       circleMouseFollower(xscale,yscale);
+       timeoutId = setTimeout(() => {
+            circleMouseFollower(1, 1);
+        }, 100);
+        xprev=dets.clientX;
+        yprev=dets.clientY;
+    })
+}
+function circleMouseFollower(xscale,yscale){
+    window.addEventListener('mousemove', function(dets){
+        document.querySelector('#minicircle').style.transform = `translate(${dets.clientX}px, ${dets.clientY}px) scale(${xscale}, ${yscale})`;
+    })
+}
 pageTransition();
+skewMouseFollower();
