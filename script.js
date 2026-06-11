@@ -37,8 +37,8 @@ function skewMouseFollower(){
         clearTimeout(timeoutId);
         var xdiff=dets.clientX-xprev;
         var ydiff=dets.clientY-yprev;
-       xscale=gsap.utils.clamp(.7,1.3,xdiff);
-       yscale=gsap.utils.clamp(.7,1.3,ydiff);
+       xscale=gsap.utils.clamp(.8,1.2,xdiff);
+       yscale=gsap.utils.clamp(.8,1.2,ydiff);
        circleMouseFollower(xscale,yscale);
        timeoutId = setTimeout(() => {
             circleMouseFollower(1, 1);
