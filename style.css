@@ -84,16 +84,17 @@
     height: 100vh;
     padding: 130px;
 }
-#elem{
+.elem{
     border-top: 2px solid white;
-    padding: 2rem;
+    padding: 3.5vw 2vw;
     padding-right: 0%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
-#elem h1{
-    font-size: 6vw;
+.elem h1{
+    font-size: 7vw;
     font-family: "General Sans Medium", sans-serif;
     opacity: .7;
 
@@ -101,11 +102,13 @@
 #second .last{
     border-bottom: 2px solid white;
 }
-#elem img{
-    height: 300px;
+.elem img {
+    height: 140%;
     position: absolute;
     z-index: 999;
     display: none;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
 }
 #about{
     background-color: black;
